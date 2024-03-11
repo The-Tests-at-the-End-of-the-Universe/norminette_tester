@@ -14,7 +14,7 @@
 
 
 # define NORMFOLDER "../"
-# define NORMLOGS "logs/norminette_output.txt"
-# define NORMLOCLOGS "logs/norminette_location.txt"
+# define NORMLOGS "norminette_output.txt"
+# define NORMLOCLOGS "norminette_location.txt"
 
 #endif
