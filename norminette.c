@@ -104,7 +104,7 @@ void norminette_tester(char ** argv, char ** envp)
 		waitpid(pid, &wstatus, 0);
 	}
 	freopen("/dev/tty", "w", stdout);
-	printf("\033[28G");
+	printf("\033[55G");
 	if(wstatus != 0)
 		printf(RED "FAIL\n" RESET);
 	if(wstatus == 0)
