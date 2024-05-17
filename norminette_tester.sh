@@ -102,6 +102,7 @@ fi
 # 	esac
 # done
 
+headers=$(find $dir -type f -name "*.h")
 
 files=$(find $dir -type f -name "*.c")
 
@@ -109,6 +110,18 @@ if [ $print_intro = true ];
 then echo -e "${YEL}Norminette${RESET}" 
 else :
 fi
+
+for header in $headers
+do
+norminette $header >>norminette.log 2>&1
+status=$?
+if [ $status -eq 0 ];
+then echo -e "${BMAG}$header ${LINEP}${GRN}OK${RESET}" 
+else 
+echo -e "${BMAG}$header ${LINEP}${RED}FAIL${RESET}"
+FAIL=true
+fi
+done
 
 for file in $files
 do
