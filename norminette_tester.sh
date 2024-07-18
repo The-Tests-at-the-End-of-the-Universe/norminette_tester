@@ -137,5 +137,6 @@ done
 
 if [ $FAIL = true ];
 then echo -e "${RED}Check norminette_tester/norminette.log for errors${RESET}"
+exit 1
 fi
 exit 0
